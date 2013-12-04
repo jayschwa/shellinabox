@@ -2894,10 +2894,10 @@ VT100.prototype.keyDown = function(event) {
     event.keyCode == 226;
   var normalKey                 =
     alphNumKey                                   ||
-    event.keyCode ==  59 || event.keyCode ==  61 ||
+    event.keyCode >=  58 && event.keyCode <=  64 ||
     event.keyCode == 106 || event.keyCode == 107 ||
     event.keyCode >= 109 && event.keyCode <= 111 ||
-    event.keyCode >= 186 && event.keyCode <= 192 ||
+    event.keyCode >= 160 && event.keyCode <= 192 ||
     event.keyCode >= 219 && event.keyCode <= 223 ||
     event.keyCode == 252;
   try {
@@ -3033,10 +3033,10 @@ VT100.prototype.keyUp = function(event) {
         event.keyCode >=  96 && event.keyCode <= 105;
       var normalKey               =
         alphNumKey                                   ||
-        event.keyCode ==  59 || event.keyCode ==  61 ||
+        event.keyCode >=  58 && event.keyCode <=  64 ||
         event.keyCode == 106 || event.keyCode == 107 ||
         event.keyCode >= 109 && event.keyCode <= 111 ||
-        event.keyCode >= 186 && event.keyCode <= 192 ||
+        event.keyCode >= 160 && event.keyCode <= 192 ||
         event.keyCode >= 219 && event.keyCode <= 223 ||
         event.keyCode == 252;
       var fake                    = [ ];
